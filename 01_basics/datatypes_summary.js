@@ -37,3 +37,32 @@ console.log(typeof null);
 // ECMA types of Operator
 
 
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// two types of memory 
+//  stack  and heap
+// stack(primitive)  , heap(Non-Primitive)
+
+let myYoutubename = "ankurdotcom"
+let anothername =  myYoutubename
+
+anothername = "chaiaurcode"
+
+console.log(myYoutubename);
+console.log(anothername);
+
+let user1 = {
+    email : "user@google.com",
+    api : "asds"
+}
+
+let user2 = user1
+user2.email = "ankm@gmail.com"
+console.log(user1.email);
+console.log(user2.email);
+
+
+
+
