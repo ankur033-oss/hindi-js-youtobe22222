@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body style="background-color: #414141; color:#fff">
+    <div>
+        <ul id="images">
+            <li><img width="200px" height="100px" id="river" src="https://images.pexels.com/photos/103123/pexels-photo-103123.jpeg?auto=compress&cs=tinysrgb&w=400" alt=""></li>
+            <li><img width="200px" height="100px" id="owl" src="https://images.pexels.com/photos/1266810/pexels-photo-1266810.jpeg?auto=compress&cs=tinysrgb&w=400" alt=""></li>
+            <li><img width="200px" height="100px" id="prayer" src="https://images.pexels.com/photos/2176593/pexels-photo-2176593.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+            <li><img width="200px" height="100px" id="rat" src="https://images.pexels.com/photos/1462011/pexels-photo-1462011.jpeg?auto=compress&cs=tinysrgb&w=400" alt=""></li>
+            <li><img width="200px" height="100px" id="dog" src="https://images.pexels.com/photos/2318543/pexels-photo-2318543.jpeg?auto=compress&cs=tinysrgb&w=400" alt=""></li>
+        </ul>
+    </div>
+</body>
+<script>
+    /*
+    //document.getElementById('rat').onclick = function(){
+      //  alert("rat clicked")
+    //}
+    
+    // attachEvent
+    // jQuery  - on
+
+    //document.getElementById('rat').addEventListener('click', function(e){
+    //    // alert("rat clicked again")
+     //   console.log(e);
+    //},false) 
+
+    // type, timestamp, defaultPrevented,
+    // target , srcElement , currentTarget, 
+    // clientX, clientY, sccreenX, screenY
+    //altkey, ctrlkey, sshiftkey, keycode
+
+    document.getElementById('images').addEventListener('click', function(e){
+        // alert("rat clicked again")
+        console.log("clicked inside the ul");
+    },false)
+    document.getElementById('rat').addEventListener('click', function(e){
+        // alert("rat clicked again")
+        console.log("rat clicked");
+        e.stopPropagation()
+    },false)
+
+    // bubbling & capturing
+
+    document.getElementById('dog').addEventListener
+    ('click',function(e){
+        e.preventDefault();
+        // to stop bubbling use
+        e.stopPropagation();
+        console.log("dog clicked");
+    }, false)
+    */
+
+
+     document.querySelector('#images').addEventListener
+     ('click', function(e){
+      console.log(e.target.parentNode.tagName)
+
+      if(e.target.tagname == 'IMG'){
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode
+        removeIt.remove()
+      }
+
+
+
+      // asynchronous 
+
+
+      //removeIt.parentNode.removeChild(removeIt)
+
+     });
+
+
+</script>
+</html>
